@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--My metadata--->
+        <meta name="description" content="Lead HTML and CSS, first website">
+        <meta name="author" content="Gloria Raventos">
+        <meta name="keywords" content="Havana City">        
+        <!--End metadata-->
+        <title>Contact-us</title>
+    </head>
+    <body>
+
+        <h1>Contact-us</h1>
+        <hr>
+
+        <form action="send_contact_information.html" method="get" enctype="application/x-www-form-urlencoded">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="username">Username: 
+                    <input type="text" name="username" id="username" placeholder="username" size="12" minlength="3" maxlength="12" pattern="^[a-zA-Z]+$" required>
+                </label>
+                <label for="name">Name: 
+                    <input type="text" name="name" id="name" placeholder="name" size="60"  required >
+                </label>
+                <label for="password">Password: 
+                    <input type="password" name="password" id="password" size="30" maxlength="8" placeholder="password">
+                </label>                
+                <label for="birthday">Birthday: 
+                    <input type="date" name="birthday_date" id="birthday" required>
+                </label>
+
+                <label for="email">Email: 
+                    <input type="email" name="email" id="email" size="40" required>
+                </label>
+
+                <label for="url_personal">Personal Url:
+                    <input type="url" name="url" id="url_personal">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select your favorite city of Havana City</legend>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Arroyo Naranjo">Arroyo Naranjo 
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Boyeros">Boyeros
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Centro Habana" checked>Centro Habana
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Cerro">Cerro
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Cotorro">Cotorro
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Diez de Octubre">Diez de Octubre
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="La Habana del Este">La Habana del Este
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="La Habana Vieja">La Habana Vieja
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="La Lisa">La Lisa
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Marianao">Marianao
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Playa">Playa
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Plaza de la Revolución">Plaza de la Revolución
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="Regla">Regla
+                </label>
+                <label>
+                    <input type="radio" name="city_of_Havana_City" id="" value="San Miguel del Padrón">San Miguel del Padrón
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What places would you like to visit in Havana City?</legend>
+                <label>
+                    <input type="checkbox" name="videogames" value="Lenin Park" checked>Lenin Park
+                </label>
+                <label>
+                    <input type="checkbox" name="videogames" value="EXPOCUBA">EXPOCUBA
+                </label>
+                <label>
+                    <input type="checkbox" name="videogames" value="Museo Nacional de Bellas Artes">Museo Nacional de Bellas Artes
+                </label>
+                <label>
+                    <input type="checkbox" name="videogames" value="Gran Teatro de la Habana" checked>Gran Teatro de la Habana
+                </label>
+                <label>
+                    <input type="checkbox" name="videogames" value="Beaches of the east" checked>Beaches of the east
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What other Cuba's Province would you like to visit?</legend>
+                <select name="cuba-provinces" id="">
+                    <option value="Artemisa">Artemisa</option>
+                    <option value="Camagüey">Camagüey</option>
+                    <option value="Ciego de Ávila">Ciego de Ávila</option>
+                    <option value="Cienfuegos">Cienfuegos</option>
+                    <option value="Granma">Granma</option>
+                    <option value="Guantánamo">Guantánamo</option>
+                    <option value="Holguín">Holguín</option>
+                    <option value="Isla de la Juventud">Isla de la Juventud</option>
+                    <option value="La Habana" selected>Habana City</option>
+                    <option value="Las Tunas">Las Tunas</option>
+                    <option value="Matanzas">Matanzas</option>
+                    <option value="Mayabeque">Mayabeque</option>
+                    <option value="Pinar del Río">Pinar del Río</option>
+                    <option value="Sancti Spíritus">Sancti Spíritus</option>
+                    <option value="Santiago de Cuba">Santiago de Cuba</option>
+                    <option value="Villa Clara">Villa Clara</option>
+                </select>
+            </fieldset>
+
+            <input type="hidden" name="userid" value="2500">
+
+            <input type="image" src="assets/img/register_button.png" width="120" style="margin-top: 15px" name="login" >
+            
+        </form>
+
+        <form action="send_avatar.html" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Send your fhoto</legend>
+                <input type="file">
+            </fieldset>            
+        </form>
+
+        
+                   
+    </body>
+</html>

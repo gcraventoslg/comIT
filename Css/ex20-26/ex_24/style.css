@@ -1,0 +1,44 @@
+body {
+    padding: 0 20px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    color: #f47933;
+}
+
+p {
+    text-align: justify;
+}
+
+img {
+    border: 2px solid transparent;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+img.left {
+    float:left;
+}
+
+img.right {
+    float: right;;
+}
+
+.html {
+    border-color:  #f47933;
+    box-shadow: 0 3px 2px #f47933;
+}
+
+.css {
+    border-color:#008fd5;
+    box-shadow: 0 3px 2px #008fd5;
+}
+
+.js {
+    border-color:#f99d34;
+    box-shadow:  0 3px 2px #f99d34;
+}

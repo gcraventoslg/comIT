@@ -1,0 +1,40 @@
+table {
+    border-collapse: collapse;  
+    font-family: cursive;  
+}
+
+table td, th {
+    padding: 8px 12px;
+    text-align: center;
+}
+
+table td{
+    font-size: 13px;
+}
+
+table:first-child{
+    background-color: red;
+}
+
+thead tr:nth-child(1) {
+    background-color: #122f52;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+.cursiva_text{
+    font-style: italic;
+}
+
+.verticalalign {
+    vertical-align: middle;
+}
+
+tfoot{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;    
+}

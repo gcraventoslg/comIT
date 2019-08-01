@@ -1,0 +1,39 @@
+ * {
+    border: 1px solid black;
+    /*border-style: solid;    */
+ }  
+
+ html {
+    border-color: purple;    
+ }
+
+
+ body{
+     border-color:red;
+ }
+
+ div{
+     border-color:blue;
+ }
+
+ p{
+    Border-width:2px;
+    Border-color: green;
+ }
+
+ span{
+     border: 3px dotted brown;
+ }
+ 
+
+ a{
+     border: 2px dashed coral;
+ }
+ 
+ .radius{
+     border-color:orange;
+     border-width: 2px;
+     border-radius: 20px;
+ }
+
+ 

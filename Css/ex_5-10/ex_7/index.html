@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Vertical Align</title>
+        <style>
+            /*Select the image element inside the paragraph and set the following style:
+            The image must be vertical align with the value super*/
+            p > img {
+                /*vertical-align: super;*/
+                vertical-align: bottom;
+            }
+            /*Now select the image element inside the button and set the following style:
+            The image must be vertical align with the value top*/
+            button > img {
+                /*vertical-align: top;*/
+                vertical-align: middle;
+            }
+            /*Change the image element vertical align value to bottom, then middle and on each change refresh the page to see how vertical aligment works in CSS*/
+        </style>
+    </head>
+
+    <body>
+        <h1>Vertical Align</h1>
+        <p>In this text we show an Icon <img src="easter-egg.jpg" alt="icon" title="icon"></p>
+        <button>Easter is Coming <img src="easter-egg.jpg" alt="icon" title="icon"></button>
+    </body>
+
+</html>

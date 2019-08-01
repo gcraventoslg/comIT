@@ -1,0 +1,56 @@
+h1{
+    text-transform: uppercase;
+}
+
+
+.my-menu{
+    list-style: none;
+    text-align: center;    
+}
+
+.my-menu li{
+    display: inline;
+    margin-left: 15px;    
+}
+
+.my-menu li:hover {
+    cursor: pointer;
+    color: blue;
+    font-weight: bold;
+}
+
+#link-goback{
+    float: right;
+    padding: 10px;
+}
+
+#link-goback:hover{
+    background-color: #cccccc;
+}
+
+
+.content{
+    
+    width: 600px;
+    border: solid 1px black;
+    padding: 20px;
+    margin: auto;
+}
+
+.first-content{
+    text-align: center;
+}
+.sections ul {
+    text-align: left;
+    font-size: 18px;
+}
+
+.sections h3 {
+    text-align: left;
+    font-size: 18px;
+    text-transform: uppercase
+}
+
+.sections p {    
+    font-size: 18px;    
+}

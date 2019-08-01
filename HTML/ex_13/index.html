@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Create User</title>
+    </head>
+    <body>
+
+        <h1>Create User</h1>
+        <hr>
+
+        <form action="actioname.html" method="get" enctype="multipart/form-data">
+            <label for="name">Name: 
+                <input type="text" name="name" id="name" placeholder="name" size="30" maxlength="12" >
+            </label>
+
+            <fieldset>
+                <legend>Select a superheros</legend>
+                <label for="superheros_list">SuperHeros:</label>
+                <select name="superheros" id="superheros_list">
+                        <option value="deadpool"> Deadpool</option>
+                        <option value="batman_vs_superman"> Batman v Superman</option>
+                        <option value="civil_war"> Captain America: Civil War</option>
+                        <option value="doctor_strange"> Doctor Strange</option>
+                        <option value="suicide_squad"> Suicide Squad</option>
+                        <option value="apocalypse"> X-Men: Apocalypse</option>
+                        <option value="gotg_vol2"> Guardians of the Galaxy Vol 2</option>
+                        <option value="justice_league"> Justice League</option>
+                        <option value="logan"> Logan</option>
+                        <option value="homecoming"> Spider-Man: Homecoming</option>
+                        <option value="wonder_woman" selected> Wonder Woman</option>
+                        <option value="thor_ragnarok"> Thor: Ragnarok</option>
+                        <option value="black_panther"> Black Panther</option>
+                </select>
+            </fieldset>            
+
+            <fieldset>
+                <legend>To write the bio</legend>
+                <textarea name="" id="" cols="50" rows="5"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>To upload a avatar image</legend>
+                <label for="avatar_file">Select a File<input type="file" name="" id="avatar_file"></label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Actions</legend>
+                <input type="button" value=" Clear Form">
+                <input type="button" value=" Add new user">
+            </fieldset>           
+            
+        </form>
+
+        
+    </body>
+</html>

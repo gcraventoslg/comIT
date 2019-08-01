@@ -1,0 +1,146 @@
+#content{
+    padding: 20px;
+    background-color: #ccc;        
+    width: 1020px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    background-color: #fff;
+    text-align: center;    
+    width: 1020px;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+#content-img{
+    margin-left: 20px
+}
+
+
+nav {    
+    background-color: #fff; 
+    padding: 10px;
+    margin-top: 20px;
+    display: inline-flex;
+    width: 1000px;
+}
+#list-footer > ul, nav ul {
+    list-style: none;    
+}
+
+nav ul li {
+    display: inline;    
+    text-transform: uppercase;
+    background-color: rgba(14, 14, 60, 0.8);    
+    padding: 8px 20px;
+    
+}
+
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav li:hover{
+    background-color: rgb(172, 167, 167);
+    cursor: pointer;
+}
+
+.body-information{
+    width: 1020px;
+    background-color: #fff;
+    padding: 10px 0px;
+    margin-top: 10px
+}
+
+.body-information h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.body-information h2 , span, h3{
+    margin-left: 20px
+}
+
+
+.body-information p{
+    text-align: justify;
+    padding: 0px 20px;    
+}
+
+.body-information h2 a{
+    text-decoration: none;
+}
+
+.body-information table{
+    text-align: center;
+    width: 1000px;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+#cities-table thead, tfoot{
+    background-color: rgb(57, 31, 122);    
+    color: white;
+    text-transform: uppercase;
+}
+
+#cities-table th {
+    padding: 10px;
+}
+
+#cities-table td{
+    padding: 5px 10px;
+}
+
+.body-information tbody {
+    font-size: 12px;
+}
+
+.images-recreational{
+    text-align: center;
+}
+
+.images-recreational img{
+    margin-left: 20px;
+}
+
+footer{
+    background-color: #fff;    
+    font-size: 13px;
+    display: flex;
+    margin-top: 10px;    
+}
+
+footer ul{
+    padding: 20px;
+    list-style: none;
+}
+
+footer li{
+    padding: 4px 0px;
+}
+
+footer a {
+    text-decoration: none;
+    
+}
+
+.body-section{
+    background-color: white;
+    width: 1020px;
+    margin-top: 15px;
+}
+
+.body-section video{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.body-section p{
+    text-align: center
+}

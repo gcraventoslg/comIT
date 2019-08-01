@@ -1,0 +1,148 @@
+/*Select the table element and apply the following style:
+Borders must be collapse
+Use Arial, Helvetica, sans-serif as font family
+Text color must be #6e6f74*/
+table {
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6e6f74;
+}
+
+/*Select the thead element and apply the following style:
+Text color must be #685e5c
+Font weight must be bold*/
+
+thead {
+    color: #685e5c;
+    font-weight: bold;
+}
+
+/*Select the tr elements that are children of the tbody element and apply the following style:
+Use this value: 1px solid #ddd only for border bottom*/
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/*Select the th and td elements and apply the following style:
+Add 20px padding to all sides*/
+td, th {
+    padding: 20px;
+}
+
+/*Select the first td child element (first-child pseudoclass) from the tbody element and apply the following style:
+Text color must be #3e7589*/
+tbody td:first-child{
+    color:#3e7589;
+}
+
+/*Select the last tr child element (last-child pseudoclass) from the tbody element and apply the following style:
+Remove all borders*/
+tbody tr:last-child {
+    border:none;
+}
+
+/*Select the tfoot element and apply the following style:
+Text align must be center*/
+tfoot {
+    text-align: center;
+}
+
+/*Select the link elements that are children of the tfoot element and apply the following style:
+Display must be inline-block
+Remove text decoration
+Text color must be #aaa
+Add 10px only to right margin*/
+
+tfoot a {
+    display: inline-block;
+    text-decoration: none;
+    color:#aaa;
+    margin-right: 10px;
+}
+
+/*Select the link element with the active class that is children of the tfoot element and apply the following style:
+Text color must be white
+Font weight must be bold
+Background color must be #008cba
+Add 10px padding to top and bottom sides
+Add 15px padding to left and right side
+Add a border radius of 10px*/
+
+tfoot a.active {
+    color:white;
+    font-weight: bold;
+    background-color: #008cba;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/*Select the element with the selected class and apply the following styles:
+Background color must be #d9edf6*/
+.selected {
+    background-color: #d9edf6;
+}
+/*Select the element with the error class and apply the following styles:
+Background color must be #f2dedf*/
+
+.error {
+    background-color: #f2dedf;
+}
+
+/*PLAN B*/
+
+#my_table_css tr {
+    border-bottom: 2px solid black;
+}
+
+#my_table_css td{
+    padding: 5px 10px;
+}
+
+#my_table_css th{
+    padding: 20px 10px;
+}
+
+#my_table_css thead tr {
+    border-top: 2px solid black;
+    background-color: #6ed3cf;
+}
+
+#my_table_css tr td:first-child,
+#my_table_css tr th:first-child {
+    border-left: 2px solid black;
+}
+
+#my_table_css tr td:last-child,
+#my_table_css tr th:last-child {
+    border-right: 2px solid black;
+}
+
+#my_table_css tbody tr.error, #my_table_css tbody tr.error td:first-child {
+    background-color: #e62739;
+    color: white;
+}
+
+#my_table_css tbody tr.selected, #my_table_css tbody tr.selected td:first-child {
+    background-color: #e1e8f0;    
+}
+
+#my_table_css tfoot {
+    text-align: right;
+}
+
+#my_table_css tfoot tr td:last-child {
+    border-right: none;
+}
+
+#my_table_css tfoot tr td:first-child {
+    border-left: none;
+}
+
+#my_table_css tfoot a.active {
+    color:white;  
+    background-color: #9068be;   
+}
+#my_table_css tfoot a.active:hover {    
+    opacity: 0.8;
+}
