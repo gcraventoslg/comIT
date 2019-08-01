@@ -8,10 +8,10 @@ This project it's to learn HTML, CSS, JS, Node.js and MongoDB
 4. [Node exercises](https://github.com/gcraventoslg/react-course/tree/master/nodejs)
 5. [Final Project](https://github.com/gcraventoslg/comIT/tree/master/final_project)
 
-##HTML
-##Css
-##js 
-##Node
-##Final Project
+## HTML
+## Css
+## js 
+## Node
+## Final Project
 
 
