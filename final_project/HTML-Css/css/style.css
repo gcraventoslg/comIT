@@ -1,0 +1,219 @@
+body, div, form,ul {
+    margin: 0;
+    padding: 0;    
+}
+
+body {
+    width: auto;
+    height: 650px    
+}
+
+#contentLogin {
+    height:600px;   
+    width: 400px;
+    background: white; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, .16);
+    border: 1px solid black; 
+    font-family: 'Segoe UI';
+}
+
+.header-login {    
+    height: 75px;
+    width: auto; 
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-login{      
+    width: auto;
+    padding: 50px 45px 0 45px;
+}
+.form-sign-in{
+    width: auto;
+    padding: 40px 45px 0 45px;
+}
+#formLogin span {
+    align-self: flex-end;
+    font-size: 11px;
+}
+#formLogin label, #formSignIn label {    
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+#formSignIn label{
+    text-transform: capitalize;
+}
+
+#formLogin input, #formSignIn input{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#formLogin label[for='password'] {
+    margin-top: 32px;
+}
+
+#forgot-pass {
+    cursor: pointer;
+}
+
+#formLogin button, #formSignIn button {
+    height: 50px;
+    border-radius: 30px;
+    border:1px solid #707070;
+    text-transform: uppercase;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top:65px;
+    box-shadow: 1px 1px 2px #000;
+}
+
+#formSignIn button {
+    margin-top: 45px;
+}
+
+#formLogin button:hover, #formSignIn button:hover{
+    background: radial-gradient(ellipse at left, #7466C9,#7466C9, #7466C9,#686DCB,#4B7CD1 70%);
+    cursor: pointer;
+    box-shadow: 1px 1px 4px #000;
+}
+
+.other-option-login {    
+    width: auto;
+    height: 150px;
+    font-size: 11px;
+}
+
+#content-media-icons {
+    margin-top:10px;
+}
+
+#content-media-icons img:hover{
+    cursor: pointer;    
+    box-shadow: 1px 1px 2px rgb(153, 149, 149);
+    border-radius: 50px;
+}
+
+#sign-up-link {
+    margin-top: 40px;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+#sign-up-link:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 1px  rgb(153, 149, 149);
+}
+
+.background-gradient {    
+    background: radial-gradient(ellipse at left, #7466C9,#7466C9, #7466C9,#686DCB,#4B7CD1 100%);
+}
+
+.flex-display {
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.center-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.top-center{
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.required-symbol{
+    color: red;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.login-linkedin{
+    height: 400px;
+}
+/*ROBOTO Font   **/
+
+@font-face {
+    font-family: "Bitstream Vera Serif Bold";
+    src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+  }
+
+/*Style template*/
+
+header {
+    height: 70px;
+    width: auto;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.main-workspace{
+    /*background: #CFCFE0;*/
+    background: red;
+    width: 1518px;
+    height: 1000px;
+}
+
+.main-nav{
+    list-style: none;     
+}
+
+ul.main-nav li {
+    display: inline;    
+    margin-left: 5px;
+}
+
+ul.main-nav li:hover,ul.main-nav li ul li:hover {
+    cursor: pointer;
+}
+
+ul.main-nav li ul li {
+    display: block;
+    clear: both;
+  width: 100%;
+}
+
+ul.main-nav li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+header {
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;  
+    padding: 0 0 0 90px;  
+}
+
+ul.main-nav li:nth-child(2) {
+    margin-left : 70px;
+}
+
+ul.main-nav li:nth-child(4){
+    margin-left: 900px;
+}
+
+
