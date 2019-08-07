@@ -1,4 +1,5 @@
 const income = 1000;
+
 const revenue = 600;
 const taxes = 500;
 

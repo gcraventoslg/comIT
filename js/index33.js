@@ -1,6 +1,7 @@
 
 
-let userCount = 100;
+ let userCount = 100;
+
 
 userCount +=5;
 console.log(`Users count: ${userCount}`);
