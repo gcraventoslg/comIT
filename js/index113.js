@@ -1,7 +1,6 @@
-function getShapePerimiter  (base ,height) {
-    let message = '';
+function getShapePerimiter  (base ,height) {    
     const perimeter = (base === height) ? 4*base : 2*( height + base );
-    message += `${perimeter} is the shape perimiter \n`;
+    let message = `${perimeter} is the shape perimiter \n`;
     message += (perimeter > 100) ? 'The perimiter is to big' : 'The perimiter is fine';
     return message;
 }

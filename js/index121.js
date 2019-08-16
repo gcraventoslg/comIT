@@ -7,6 +7,5 @@ games[3] = 'FIFA 17';
 games[2] = 'FIFA 16';
 
 for (let i = 0; i < games.length; i++) {
-    console.log(`index ${i}: ${games[i]}`);
-    
+    console.log(`index ${i}: ${games[i]}`);    
 }
