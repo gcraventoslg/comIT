@@ -10,6 +10,5 @@ students[4] = 'Samuel';
 students[6] = 'Nico';
 
 for (let i = 0; i < students.length; i++) {
-    console.log(`index ${i}: ${students[i]}`);
-    
+    console.log(`index ${i}: ${students[i]}`);    
 }

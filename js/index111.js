@@ -1,23 +1,12 @@
-
-const evenNumber = function(number){  
-    if (number % 2 === 0) {
-        return true;
-    }else{
-        return false;
-    }    
-}
-
 const ifEvenNumber =  function(number){
-    if (evenNumber(number)) {
-        console.log(`${number} is even`);
-    }else{
-        console.log(`${number} is odd`);
-    }
+    const message = (number % 2 === 0) ? `${number} is even` : `${number} is odd` ; 
+    return message;
 }
 
-ifEvenNumber(2);
-ifEvenNumber(5);
-ifEvenNumber(3);
-ifEvenNumber(24);
-ifEvenNumber(12);
+console.log(ifEvenNumber(2));
+console.log(ifEvenNumber(5));
+console.log(ifEvenNumber(3));
+console.log(ifEvenNumber(24));
+console.log(ifEvenNumber(12));
+console.log(ifEvenNumber(25));
 

@@ -13,6 +13,7 @@ for (let i = 0; i < ingredients.length; i++) {
 }
 
 console.log('=====//=========');
+
 console.log('Vegetarian');
 for (let i = 0; i < vegetarian.length; i++) {
     console.log(vegetarian[i]);    
