@@ -5,7 +5,6 @@ const updatedMutantsArray = mutants.map(function(mutant){
             ? '<3 '.concat(mutant) : mutant;
 });
 
-
 console.log(mutants);
 console.log(updatedMutantsArray);
 
