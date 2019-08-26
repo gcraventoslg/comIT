@@ -14,13 +14,32 @@ const newGamesArray = games.map(game => {
 
 const consoleTypeToFilter = "PS4";
 
-const budgetResult = newGamesArray
-  .filter(game => game.console === consoleTypeToFilter)
-  .reduce((budget, game) => {
-    return budget + game.price;
-  });
+const ps4GamesArray = newGamesArray.filter(
+  game => game.console === consoleTypeToFilter
+);
 
-console.log(budgetResult);
-/** Seria para todos los juegos o solo para los PS4 */
-/*Show the gameNames items as output
-Show the gamePrices items as output*/
+const budgetResult = ps4GamesArray.reduce((accumulator, game) => {
+  return { price: accumulator.price + game.price };
+});
+
+console.log(
+  `I need ${budgetResult.price} CAD to get all this PS$ great games!!`
+);
+
+let gameNames = [];
+let gamePrices = [];
+const getNewArrays = function(game) {
+  gameNames.push(game.name);
+  gamePrices.push(game.price);
+};
+
+ps4GamesArray.forEach(getNewArrays);
+
+const showArrayValues = function(arrayValue) {
+  arrayValue.forEach(value => {
+    console.log(value);
+  });
+};
+
+showArrayValues(gameNames);
+showArrayValues(gamePrices);
