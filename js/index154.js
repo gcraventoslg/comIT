@@ -16,6 +16,7 @@ const player = {
     this.lives--;
     if (!this.verifyLive()) {
       console.log("Game Over!");
+      this.energy = 100;
     }
   },
   recoverLife: function() {
