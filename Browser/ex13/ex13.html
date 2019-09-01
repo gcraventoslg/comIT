@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 13</title>
+
+    <script>
+
+        window.onload = function () {
+            const manySeconds = prompt('input the number of seconds that he would like to stay in our site');
+
+            let contSecond = manySeconds;
+            const sendSecond = manySeconds * 1000;
+
+            const contSencondsF = function() {
+                contSecond--;
+
+                if (contSecond === 0) {
+                    clearInterval(id);
+                    console.log('Your session has expired, come again soon!');
+                }else{
+                    console.log(`${contSecond} Seconds`);                
+                }                
+            }
+
+            const id = setInterval(contSencondsF, sendSecond);
+        }        
+        
+    </script>
+   
+</head>
+<body>
+    
+    <h1>Exercise 13</h1>
+    <hr>
+   
+   
+</body>
+</html>
