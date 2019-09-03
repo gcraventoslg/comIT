@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Texts</title>
+</head>
+<script>
+    window.onload = function () {
+        const title1 = document.querySelector('h1');
+        const textInTitle = title1.innerText;
+        
+        const paragraphE = document.querySelector('p');
+        const textInParagraph = paragraphE.textContent;
+        
+        title1.textContent = textInParagraph;
+        paragraphE.innerText = textInTitle;
+    }
+
+</script>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+</body>
+</html>
