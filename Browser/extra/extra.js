@@ -14,23 +14,31 @@ window.onload = function() {
   ];
 
   const listElement = document.querySelector("#avengerList");
-
   let listItem = "";
-  heros.forEach(element => {
-    listItem += `<li>${element.toUpperCase()}</li>`;
-  });
-  listElement.innerHTML = listItem;
+
+  const createHeroList = function(hero) {
+    listItem += `<li>${hero.toUpperCase()}</li>`;
+  };
+
+  const addHerosList = function() {
+    listElement.innerHTML = listItem;
+  };
+
+  const buildList = function() {
+    heros.forEach(createHeroList);
+    addHerosList();
+  };
 
   const getButton = document.querySelector("button");
   getButton.onclick = function() {
     const newHero = prompt("Input a new Hero Name");
     if (newHero) {
-      listItem += `<li>${newHero.toUpperCase()}</li>`;
-      listElement.innerHTML = listItem;
+      createHeroList(newHero);
+      addHerosList();
+      heros.push(newHero);
     } else {
       alert("Enter a valid name");
     }
   };
-
-  console.log(listElement);
+  buildList();
 };
