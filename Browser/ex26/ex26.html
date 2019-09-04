@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function () {
+            const body = document.querySelector('body');
+            const nameList = ['Gloria', 'Fidel', 'Manuel', 'Cecilia', 'Alexander','Adina','Caridad','Silvia','Arnulfo','Juana'];
+            const listElemtnt = document.createElement('ul');
+            
+            nameList.forEach(name => {
+                let listItem = document.createElement('li');
+                listItem.innerHTML = name;
+                listElemtnt.appendChild(listItem);
+            });
+
+            body.appendChild(listElemtnt);
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
