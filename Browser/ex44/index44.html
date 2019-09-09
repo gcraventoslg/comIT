@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+      window.onload = function () {
+          const form = document.querySelector('form');
+
+          let inputUsername, inputPassword = '';
+          inputUsername = form.elements[0];
+          inputPassword = form.elements[1];
+
+          inputUsername.value = 'morty';
+          inputPassword.value = '12345';
+
+          const button = document.querySelector('button');
+          const showAlert = function (event) {
+              event.preventDefault();
+              alert(`Username: ${inputUsername.value} and Password: ${inputPassword.value}`);
+          }
+          button.addEventListener('click', showAlert);
+      }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <button>Show Username and Password</button>
+  </form>
+  <div></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>It's all JavaScript Baby!!</title>
+        <script>        
+            const listElemtnt = document.createElement('ol');            
+            let namesArray = [];
+
+            const getColor = function (number) {
+                return number % 2 === 0 ? '#ddd' : '#eee';
+            }       
+
+            const createList = function (listItem, index) {            
+                let listItemElemtnt = document.createElement('li');
+                listItemElemtnt.innerHTML = `Item ${listItem} as li element content`;            
+                listItemElemtnt.style.color = getColor( index + 1 );
+                listElemtnt.appendChild(listItemElemtnt);
+            }
+
+            const getText = function () {
+                const input = document.querySelector('input');                                
+                if (input.value.length && input.value.trim().length) {
+                    namesArray.push(input.value);
+                    listElemtnt.innerHTML = '';
+                    namesArray.forEach(createList);
+                }else{
+                    alert('Enter a valid Name');
+                }                
+            }
+
+            window.onload = function () {
+                const button = document.querySelector('button');                
+                button.addEventListener('click', getText);                
+                const body = document.querySelector('body');
+                body.appendChild(listElemtnt);
+            }
+        </script>
+    </head>
+    <body>
+      <input type="text" placeholder="Enter the name">
+      <button>Add Name</button>
+    </body>
+</html>
+

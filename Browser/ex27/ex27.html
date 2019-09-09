@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>        
+        const listElemtnt = document.createElement('ul');
+        let numbersArray = [];
+        for (let i = 1; i < 101; i++) {numbersArray.push(i);}
+
+        const getColor = function (number) {
+            return number % 2 === 0 ? '#ddd' : '#eee';
+        }       
+
+        const createList = function (listItem, index) {            
+            let listItemElemtnt = document.createElement('li');
+            listItemElemtnt.innerHTML = `Item ${listItem} as li element content`;            
+            listItemElemtnt.style.color = getColor(index+1);
+            listElemtnt.appendChild(listItemElemtnt);
+        }
+
+        window.onload = function () {
+            numbersArray.forEach(createList);
+            const body = document.querySelector('body');
+            body.appendChild(listElemtnt);
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+

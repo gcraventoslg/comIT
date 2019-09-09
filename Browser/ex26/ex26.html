@@ -7,12 +7,14 @@
             const body = document.querySelector('body');
             const nameList = ['Gloria', 'Fidel', 'Manuel', 'Cecilia', 'Alexander','Adina','Caridad','Silvia','Arnulfo','Juana'];
             const listElemtnt = document.createElement('ul');
-            
-            nameList.forEach(name => {
+
+            const createList = function (name) {
                 let listItem = document.createElement('li');
                 listItem.innerHTML = name;
                 listElemtnt.appendChild(listItem);
-            });
+            }
+            
+            nameList.forEach(createList);
 
             body.appendChild(listElemtnt);
         }
