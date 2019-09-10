@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch</title>
+    <script>
+        window.onload = function () {
+            const url = 'https://swapi.co/api/films/';
+            const body = document.querySelector('body');
+            fetch(url)
+          .then(function (response) {            
+            return response.json();
+          })
+          .then(function (films) {
+            const movies = films.results;            
+            movies.forEach(movie => {
+                 body.innerHTML += `title: ${movie.title}<br>`;
+                 body.innerHTML += `episode_id: ${movie.episode_id}<br>`;
+                 body.innerHTML += `release_date: ${movie.release_date}<br>`;
+                 body.innerHTML += '_________________________________<br>';
+             });             
+          });
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
