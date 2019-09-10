@@ -1,0 +1,7 @@
+.striked{
+    text-decoration: line-through;    
+}
+
+li{
+    cursor: pointer;
+}
