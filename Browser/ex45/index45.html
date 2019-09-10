@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+      window.onload = function () {
+        const form = document.querySelector('form');
+        inputUsername = form.elements[0];
+        inputPassword = form.elements[1];    
+        submit = form.elements[2];   
+        
+        const showAlert = function (event) {
+              event.preventDefault();
+              alert(`Username: ${inputUsername.value} and Password: ${inputPassword.value}`);
+          }
+        submit.addEventListener('click', function () {
+            form.addEventListener('submit', showAlert );
+        });
+      }
+      
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div></div>
+</body>
+</html>
