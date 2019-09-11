@@ -10,39 +10,36 @@ window.onload = function() {
   submit.addEventListener("click", function() {
     form.onsubmit = () => {
       event.preventDefault();
+      div.innerHTML = "";
       const username = document.querySelector("input[name='username']");
       const pass = document.querySelector("input[name='pass']");
       const email = document.querySelector("input[name='email']");
       div.innerHTML = "";
-      if (
-        username.value &&
-        pass.value &&
-        email.value &&
-        regex.test(username.value) &&
-        regex.test(pass.value) &&
-        emailRegex.test(email.value)
-      ) {
+      if (username.value && pass.value && email.value) {
         div.classList.remove("error");
         div.innerHTML = "";
       } else {
         if (username.value || pass.value || email.value) {
           const span = document.createElement("p");
-          span.innerHTML = "Please input a username, password, and email";
+          span.innerHTML = "username, password, and email are required";
           div.classList.add("error");
           div.append(span);
         }
       }
-
       if (
         !regex.test(username.value) ||
         !regex.test(pass.value) ||
         !emailRegex.test(email.value)
       ) {
-        const span = document.createElement("p");
-        span.innerHTML = "username, password, and email or valid";
+        console.log("entro");
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML =
+          "username, password, or email are not valid valid";
         div.classList.add("error");
-        div.append(span);
+        div.append(paragraph);
       }
+
+      console.log(div);
     };
   });
 };

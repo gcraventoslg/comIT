@@ -6,6 +6,9 @@ window.onload = function() {
     form.onsubmit = function(event) {
       event.preventDefault();
       const superHerosSelected = [];
+      //change using this selector
+      const checkbox = document.querySelectorAll("input[type='checkbox']");
+      console.log(checkbox);
       const superheroes = form.elements["superheroe[]"];
       for (let i = 0; i < superheroes.length; i++) {
         if (superheroes[i].checked) {
