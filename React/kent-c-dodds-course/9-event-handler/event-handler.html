@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use Event Handlers with React</title>
+</head>
+<body>
+    <h1>Use Event Handlers with React</h1>
+    <div id="root"></div>    
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        const state =  { eventCount : 0, username : ''};
+
+        function App() {
+            return (
+                <div>
+                    <p>
+                        There have been {state.eventCount} events
+                    </p>
+                    <p>
+                        <button onClick={increment}
+                        >Click Here!</button>
+                    </p>
+                    <p>You typed: { state.username }</p>
+                    <p>
+                        <input onChange={updateUsername} />
+                    </p>
+                </div>
+            )
+        }
+
+        function updateUsername(event) {
+            setState({
+                username: event.target.value,                            
+            })  
+        }
+
+        function increment() {                                  
+            setState({
+                eventCount: state.eventCount + 1,                            
+            })
+        }
+
+        //setState({username:'Bob'});
+        function setState(newState) {
+            Object.assign(state, newState)
+            renderApp();
+        }
+
+        function renderApp() {
+            ReactDOM.render(
+                <App />,
+                document.getElementById('root'),
+            )
+        }
+        renderApp();
+    </script>
+    
+</body>
+</html>

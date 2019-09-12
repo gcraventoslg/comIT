@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex2</title>
+</head>
+<body>
+    <div id="root"></div>    
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        const rootElement = document.getElementById('root');                
+        /*const element = React.createElement('div', {
+                className: 'container',
+                children: 'Hello Word',
+            });*/
+
+        //This is the same code but in Jsx
+        //className in JSs == class to HTML
+        //const element = <div className='container'>Hello Word</div>
+        
+        //Interpolation {}, is like you are enter in javascript, 
+        const content = 'Hello Word GLoria';
+        //const element = <div className='container'>{content}</div>
+        // Inside  {} you can write any js code        
+        //const element = <div className='container'>{(()=>content)()}</div>
+        /*const myClassName = 'container';
+        const element = <div className={myClassName + '___hi-there'}>{(()=>content)()}</div>*/
+        const props = {
+            className: 'container',
+            children: 'Hello World',
+        }
+        //similar to object spread in js
+        //const element = <div {...props}/>
+        //if we want overwrite the className or children put it after the obj
+        const element = <div {...props} className="my-class"/>
+        ReactDOM.render(element, rootElement);
+
+    </script>
+</body>
+</html>
