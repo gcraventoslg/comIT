@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Controlling Form Values with React</title>
+</head>
+<body>
+    <h1>Controlling Form Values with React</h1>
+    <div id="root"></div>    
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+        class MyFancyForm extends React.Component {
+            static availableOptions = [
+                'apple',
+                'grape',
+                'cherry',
+                'orange',
+                'pear',
+                'peach',
+            ]
+            handleCommaSeparatedChange = event => {
+                console.log('handleCommaSeparatedChange');
+            }
+            handleMultilineChange = event => {
+                console.log('handleMultilineChange');
+            }
+            handleMultiSelectChange = event => {
+                console.log('handleMultiSelectChange');
+            }
+            
+            render(){
+                
+                return (
+                    <form>
+                        <div>
+                            <label>
+                                Comma sepaarted values:<br/>
+                                <input 
+                                    type="text"  
+                                    name="username"
+                                    onChange = {this.handleCommaSeparatedChange }
+                                />
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>
+                                MultiSelect Values:<br/>
+                                <select 
+                                    multiple 
+                                    size = {MyFancyForm.availableOptions.length}
+                                    onChange = {this.handleMultiSelectChange}>  
+                                </select>
+                            </label>
+                        </div>
+                    </form>
+                )
+            }            
+        }
+       
+       ReactDOM.render(
+            <MyFancyForm
+                
+            />,
+            document.getElementById('root'),
+        )
+    </script>
+    
+</body>
+</html>
