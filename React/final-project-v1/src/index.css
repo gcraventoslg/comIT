@@ -1,0 +1,50 @@
+body, div, form,ul {
+  margin: 0;
+  padding: 0;    
+}
+
+body{
+  height: auto;
+  background: white;
+}
+
+.div-contect{
+  
+  min-height: 700px;
+}
+
+.background-gradient{
+  background: radial-gradient(ellipse at left, #7466C9,#7466C9, #7466C9,#686DCB,#4B7CD1 100%);
+}
+
+.flex-display {
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.center-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.top-center{
+  justify-content: center;
+  align-items: flex-start;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

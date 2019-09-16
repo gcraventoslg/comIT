@@ -1,0 +1,122 @@
+body {
+  /* background: radial-gradient(ellipse at left, #7466C9,#7466C9, #7466C9,#686DCB,#4B7CD1 100%);*/
+}
+#contentLogin {
+    height:600px;   
+    width: 400px;
+    background: white; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, .16);
+    border: 1px solid black; 
+    font-family: 'Segoe UI';
+}
+
+.header-login {    
+    height: 75px;
+    width: auto; 
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 20px;
+    font-weight: bold;
+    color:#707070;
+}
+
+.form-login{      
+    width: auto;
+    padding: 50px 45px 0 45px;
+}
+
+#formLogin span {
+    align-self: flex-end;
+    font-size: 11px;
+}
+#formLogin label, #formSignIn label {    
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+
+#formLogin input, #formSignIn input{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#formLogin label[for='password'] {
+    margin-top: 32px;
+}
+
+#formLogin button, #formSignIn button {
+    height: 50px;
+    border-radius: 30px;
+    border:1px solid #707070;
+    text-transform: uppercase;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top:65px;
+    box-shadow: 1px 1px 2px #000;
+}
+
+#formLogin button:hover, #formSignIn button:hover{
+    background: radial-gradient(ellipse at left, #7466C9,#7466C9, #7466C9,#686DCB,#4B7CD1 70%);
+    cursor: pointer;
+    box-shadow: 1px 1px 4px #000;
+}
+
+.required-symbol{
+    color: red;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+
+#forgot-pass {
+    cursor: pointer;
+}
+
+.other-option-login {    
+    width: auto;
+    height: 150px;
+    font-size: 11px;
+    padding: 40px;
+}
+
+#content-media-icons {
+    margin-top:10px;
+}
+
+#content-media-icons img:hover{
+    cursor: pointer;    
+    box-shadow: 1px 1px 2px rgb(153, 149, 149);
+    border-radius: 50px;
+}
+
+#sign-up-link {
+    margin-top: 40px;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+#sign-up-link:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 1px  rgb(153, 149, 149);
+}
+
+@media (max-width: 768px) { 
+    #contentLogin{
+        border-radius: 0px;
+        height: auto;
+    }
+
+    .form-login{
+        padding: 50px 25px 0 25px;
+    }
+
+    .other-option-login{
+        padding: 0;
+    }
+
+
+}
