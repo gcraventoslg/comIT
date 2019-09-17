@@ -65,6 +65,8 @@
 
 #forgot-pass {
     cursor: pointer;
+    align-self: flex-end;
+    font-size: 12px;
 }
 
 .other-option-login {    

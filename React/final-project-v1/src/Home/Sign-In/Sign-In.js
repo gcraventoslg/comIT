@@ -3,7 +3,6 @@ import Translate from "react-translate-component";
 import "./Sign-In.css";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { red } from "ansi-colors";
 
 const errorStyle = {
   color: "red",
