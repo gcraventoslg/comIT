@@ -1,6 +1,4 @@
-body {
-  /* background: radial-gradient(ellipse at left, #7466C9,#7466C9, #7466C9,#686DCB,#4B7CD1 100%);*/
-}
+
 #contentLogin {
     height:600px;   
     width: 400px;
@@ -65,13 +63,6 @@ body {
     box-shadow: 1px 1px 4px #000;
 }
 
-.required-symbol{
-    color: red;
-    font-size: 20px;
-    margin-left: 3px;
-}
-
-
 #forgot-pass {
     cursor: pointer;
 }
@@ -97,11 +88,17 @@ body {
     margin-top: 40px;
     text-decoration: underline;
     font-size: 12px;
+    text-transform: uppercase;
 }
 
 #sign-up-link:hover {
     cursor: pointer;
     text-shadow: 1px 1px 1px  rgb(153, 149, 149);
+}
+
+button > a {
+    text-decoration: none;
+    color:white;
 }
 
 @media (max-width: 768px) { 

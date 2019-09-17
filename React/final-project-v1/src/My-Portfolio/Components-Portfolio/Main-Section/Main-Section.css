@@ -1,0 +1,36 @@
+.main-workspace{
+    background: #CFCFE0;    
+    padding: 60px 90px 0 90px;
+    
+}
+
+.main-workspace h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #707070;
+    text-align: left;
+    padding-bottom: 50px;   
+}
+
+#content-templates {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+@media screen and (min-width: 0px) and (max-width: 766px) {
+
+    .main-workspace {
+        padding: 20px;
+        min-width: 360px;
+    }
+
+#content-templates{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    width: auto;
+    align-items: center;
+}
+
+}

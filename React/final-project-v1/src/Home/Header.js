@@ -31,6 +31,14 @@ class Header extends React.Component {
             <option value="es">ES</option>
             <option value="pt">PT</option>
           </select>
+
+          <div className="dropdown">
+            EN
+            <div id="myDropdown" className="dropdown-content">
+              <a href="#">SP</a>
+              <a href="#">PT</a>
+            </div>
+          </div>
           <Link to="/">
             <li>Home</li>
           </Link>

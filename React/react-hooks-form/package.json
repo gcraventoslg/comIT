@@ -1,17 +1,12 @@
 {
-  "name": "final-project-v1",
+  "name": "react-hooks-form",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "counterpart": "^0.18.6",
-    "formik": "^1.5.8",
+    "bulma": "^0.7.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-interpolate-component": "^0.12.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
-    "react-translate-component": "^0.15.1",
-    "yup": "^0.27.0"
+    "react-scripts": "3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

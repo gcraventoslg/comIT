@@ -10,7 +10,16 @@ export default {
   /**Login Translate */
   emailOrUsername: "correo electrónico ó usuario",
   pass: "contraseña",
-  passForgot: "Olvido de la contraseña ?",
+  passForgot: "Olvido su contraseña ?",
   signOther: "O regístrate usando",
-  signUp: "REGÍSTRATE"
+  signUp: "REGÍSTRATE",
+  /**Section */
+  myPortfolio: "Mi Portafolio",
+  newPortfolio: "Nuevo",
+  /**Sign in component */
+  singIn: "Regístrate",
+  username: "Nombre de Usuario",
+  name: "Nombre",
+  email: "Correo Electrónico",
+  confirmPass: "Confirmar Contraseña"
 };

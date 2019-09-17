@@ -12,5 +12,14 @@ export default {
   pass: "password",
   passForgot: "Forgot Password?",
   signOther: "Or sign up using",
-  signUp: "SIGN UP"
+  signUp: "Sign up",
+  /**Section */
+  myPortfolio: "My Portfolio",
+  newPortfolio: "New",
+  /**Sign in component */
+  singIn: "Sign In",
+  username: "Username",
+  name: "Name",
+  email: "Email",
+  confirmPass: "Confirm Password"
 };
