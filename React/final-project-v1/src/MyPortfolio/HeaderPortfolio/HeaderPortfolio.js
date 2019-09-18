@@ -1,7 +1,7 @@
 import React from "react";
 import Translate from "react-translate-component";
 import { Link } from "react-router-dom";
-import "./Header-Portfolio.css";
+import "./HeaderPortfolio.css";
 import userFoto from "../../assets/imgs/userFoto.png";
 
 class HeaderMyPortfolio extends React.Component {
@@ -21,10 +21,7 @@ class HeaderMyPortfolio extends React.Component {
     const { isOpen } = this.state;
     return (
       <div>
-        <header
-          className="background-gradient"
-          onMouseLeave={this.onOpenHandler}
-        >
+        <header className="background-gradient">
           <span id="logoId" onClick={this.onOpenHandler}>
             LOGO
           </span>

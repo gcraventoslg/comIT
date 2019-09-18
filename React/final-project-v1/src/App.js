@@ -3,8 +3,9 @@ import "./App.css";
 import Home from "./Home/Home";
 import { Route, Switch } from "react-router-dom";
 import Login from "./Home/Login/Login";
-import SignIn from "./Home/Sign-In/Sign-In";
-import MyPorfolio from "./My-Portfolio/My-Portfolio";
+
+import SignIn from "./Home/SignIn/SignIn";
+import MyPorfolio from "./MyPortfolio/MyPortfolio";
 
 class App extends React.Component {
   render() {

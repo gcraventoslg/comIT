@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
-import "./Sign-In.css";
+import "./SignIn.css";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 

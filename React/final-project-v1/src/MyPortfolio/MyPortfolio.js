@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import HeaderPortfolio from "./Header-Portfolio/Header-Portfolio";
-import NewPortfolio from "./New-Portfolio/New-Portfolio";
-import PostfolioSection from "./Portfolio-Section/Portfolio-Section";
+import HeaderPortfolio from "./HeaderPortfolio/HeaderPortfolio";
+import NewPortfolio from "./NewPortfolio/NewPortfolio";
+import PostfolioSection from "./PortfolioSection/PortfolioSection";
 
 class MyPortfolio extends React.Component {
   render() {

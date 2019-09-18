@@ -1,5 +1,5 @@
 import React from "react";
-import "./Box-Component.css";
+import "./BoxComponent.css";
 import { Link } from "react-router-dom";
 
 class BoxComponent extends React.Component {

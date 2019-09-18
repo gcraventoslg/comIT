@@ -1,6 +1,7 @@
 import React from "react";
-import BoxComponent from "../Box-Component";
-import "./Main-Section.css";
+import BoxComponent from "../BoxComponent";
+import ComponentTemplate from "../ComponentTemplate";
+import "./MainSection.css";
 
 class MainSection extends React.Component {
   constructor(props) {
@@ -16,7 +17,10 @@ class MainSection extends React.Component {
     return (
       <section className="main-workspace">
         <h1>{this.state.title}</h1>
-        <div id="content-templates">{this.state.new && <BoxComponent />}</div>
+        <div id="content-templates">
+          <ComponentTemplate />
+          {this.state.new && <BoxComponent />}
+        </div>
       </section>
     );
   }

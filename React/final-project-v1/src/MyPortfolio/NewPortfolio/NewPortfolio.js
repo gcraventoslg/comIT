@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "react-translate-component";
-import MainSection from "../Components-Portfolio/Main-Section/Main-Section";
+import MainSection from "../ComponentsPortfolio/MainSection/MainSection";
 
 class NewPortfolio extends React.Component {
   render() {
