@@ -5,7 +5,7 @@ import MainSection from "../Components-Portfolio/Main-Section/Main-Section";
 class NewPortfolio extends React.Component {
   render() {
     const titleTranslate = <Translate content="newPortfolio" />;
-    return <MainSection title={titleTranslate} />;
+    return <MainSection title={titleTranslate} new={false} />;
   }
 }
 

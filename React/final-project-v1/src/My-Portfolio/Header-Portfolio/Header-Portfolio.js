@@ -8,92 +8,55 @@ class HeaderMyPortfolio extends React.Component {
   constructor() {
     super();
     this.state = {
-      activeMobileMenu: false,
-      navClass: "",
-      dropdownClass: "",
-      mobileClass: "",
-      keepSubMenuClass: ""
+      isOpen: false
     };
-    this.handleClickShowMenuMobile = this.handleClickShowMenuMobile.bind(this);
-    this.handleCloseActiveMenu = this.handleCloseActiveMenu.bind(this);
-    this.handleMouseEnterSubMenu = this.handleMouseEnterSubMenu.bind(this);
-    this.handleMouseOutSubMenu = this.handleMouseOutSubMenu.bind(this);
   }
 
-  handleClickShowMenuMobile() {
-    this.setState(prevState => {
-      console.log(!prevState.activeMobileMenu);
-      return {
-        activeMobileMenu: !prevState.activeMobileMenu
-      };
-    });
-    console.log(this.state);
-    this.addClass();
-  }
-
-  addClass() {
-    console.log("HI");
-    if (this.state.activeMobileMenu) {
-      this.setState(prevState => {
-        return {
-          navClass: prevState.navClass + "active-nav",
-          dropdownClass: prevState.dropdownClass + "dropdown-mobile",
-          mobileClass: prevState.mobileClass + "is-active"
-        };
-      });
-    } else {
-      this.setState({ navClass: "", dropdownClass: "", mobileClass: "" });
-    }
-    console.log(this.state);
-  }
-  handleCloseActiveMenu() {
-    this.setState({ navClass: "", dropdownClass: "", mobileClass: "" });
-  }
-  handleMouseEnterSubMenu() {
-    this.setState(prevState => {
-      return {
-        keepSubMenuClass: prevState.keepSubMenuClass + "keepHover"
-      };
-    });
-  }
-  handleMouseOutSubMenu() {
-    this.setState({ keepSubMenuClass: "" });
-  }
+  onOpenHandler = () => {
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen
+    }));
+  };
   render() {
+    const { isOpen } = this.state;
     return (
       <div>
         <header
           className="background-gradient"
-          onMouseLeave={this.handleCloseActiveMenu}
+          onMouseLeave={this.onOpenHandler}
         >
-          <span id="logoId" onClick={this.handleCloseActiveMenu}>
+          <span id="logoId" onClick={this.onOpenHandler}>
             LOGO
           </span>
           <div
-            className={"hamburguer " + this.state.mobileClass}
-            onClick={this.handleClickShowMenuMobile}
+            className={"hamburguer " + (isOpen ? "is-active" : "")}
+            onClick={this.onOpenHandler}
           >
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
           </div>
-          <nav className={this.state.navClass}>
-            <Link to="/my-portfolio" onClick={this.handleCloseActiveMenu}>
+          <nav className={isOpen ? "active-nav" : ""}>
+            <Link to="/my-portfolio" onClick={this.onOpenHandler}>
               <Translate content="myPortfolio" />
             </Link>
 
-            <Link to="/new-portfolio" onClick={this.handleCloseActiveMenu}>
+            <Link to="/new-portfolio" onClick={this.onOpenHandler}>
               <Translate content="newPortfolio" />
             </Link>
 
-            <div className={"dropdown " + this.state.keepSubMenuClass}>
+            <div className={isOpen ? "dropdown keepHover" : "dropdown"}>
               <span>Username</span>
               <div
-                className={"dropdown-content " + this.state.dropdownClass}
+                className={
+                  isOpen
+                    ? "dropdown-content dropdown-mobile"
+                    : "dropdown-content"
+                }
                 id="subMenuUsername"
               >
                 <a href="#">Logout</a>
-                <a href="#" onClick={this.handleCloseActiveMenu}>
+                <a href="#" onClick={this.onOpenHandler}>
                   Setting
                 </a>
               </div>
