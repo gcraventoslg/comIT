@@ -2,7 +2,7 @@ import React from "react";
 import Translate from "react-translate-component";
 import { Link } from "react-router-dom";
 import "./HeaderPortfolio.css";
-import userFoto from "../../assets/imgs/userFoto.png";
+//import userFoto from "../../assets/imgs/userFoto.png";
 
 class HeaderMyPortfolio extends React.Component {
   constructor() {
@@ -34,11 +34,11 @@ class HeaderMyPortfolio extends React.Component {
             <span className="line"></span>
           </div>
           <nav className={isOpen ? "active-nav" : ""}>
-            <Link to="/my-portfolio" onClick={this.onOpenHandler}>
+            <Link to="/my-portfolio">
               <Translate content="myPortfolio" />
             </Link>
 
-            <Link to="/new-portfolio" onClick={this.onOpenHandler}>
+            <Link to="/new-portfolio">
               <Translate content="newPortfolio" />
             </Link>
 
@@ -53,9 +53,7 @@ class HeaderMyPortfolio extends React.Component {
                 id="subMenuUsername"
               >
                 <a href="#">Logout</a>
-                <a href="#" onClick={this.onOpenHandler}>
-                  Setting
-                </a>
+                <a href="#">Setting</a>
               </div>
             </div>
           </nav>

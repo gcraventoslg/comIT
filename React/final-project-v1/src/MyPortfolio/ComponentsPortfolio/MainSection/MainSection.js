@@ -19,6 +19,7 @@ class MainSection extends React.Component {
         <h1>{this.state.title}</h1>
         <div id="content-templates">
           <ComponentTemplate />
+          <ComponentTemplate />
           {this.state.new && <BoxComponent />}
         </div>
       </section>
