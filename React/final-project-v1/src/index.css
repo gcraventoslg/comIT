@@ -97,3 +97,33 @@ code {
   text-decoration: underline;
 } 
 /*End TemplateSelected Css*/
+
+/*Nav list ul*/
+#nav>a,#listNav>a, nav>a{
+  text-decoration: none
+}
+
+#listNav>a:hover{
+  text-decoration: underline
+}
+.loginDefaultLink{
+  color: white;
+}
+
+.loginDefaultLink:hover {
+  color: rgb(60, 114, 255);
+  background: white
+}
+
+a.headerActiveLink{
+  text-decoration: underline;
+}
+
+#header > select:focus{
+  border:none;
+}
+/**/
+
+
+/*background-color: #8161c9;
+    background-image: radial-gradient(circle at 0 0,#a450c4,#467dd1);*/

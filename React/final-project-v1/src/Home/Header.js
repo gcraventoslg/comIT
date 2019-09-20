@@ -1,57 +1,60 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import counterpart from "counterpart";
-
-import en from "../lang/en";
-import es from "../lang/es";
-import pt from "../lang/pt";
-
-counterpart.registerTranslations("en", en);
-counterpart.registerTranslations("es", es);
-counterpart.registerTranslations("pt", pt);
-
-counterpart.setLocale("en");
+import Nav from "./Nav";
+import listLink from "./LinkNavHome";
+import SelectLang from "./SelectLang";
 
 class Header extends React.Component {
-  state = {
-    lang: "en"
+  constructor(props) {
+    super(props);
+    this.state = {
+      backgroundColor: "#0476D0",
+      backgroundImages: "linear-gradient(111deg,#0476D0,#2CEEF0)"
+    };
+  }
+  myCallback = dataFromChild => {
+    const getSelectedLink = listLink.filter((item, index) => {
+      return index === parseInt(dataFromChild);
+    });
+    this.setState({
+      backgroundColor: getSelectedLink[0].backgroundColor,
+      backgroundImages: getSelectedLink[0].backgroundImages
+    });
   };
-  onLangChange = e => {
-    console.log(e.target.value);
-    this.setState({ lang: e.target.value });
-    counterpart.setLocale(e.target.value);
-  };
-  render() {
-    return (
-      <div>
-        <h1>Header Home Page</h1>
-        <nav>
-          <select value={this.state.lang} onChange={this.onLangChange}>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-            <option value="pt">PT</option>
-          </select>
 
-          <div className="dropdown">
-            EN
-            <div id="myDropdown" className="dropdown-content">
-              <a href="#">SP</a>
-              <a href="#">PT</a>
-            </div>
-          </div>
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-          <Link to="/login">
-            <li>Login</li>
-          </Link>
-          <Link to="/register">
-            <li>Sign In</li>
-          </Link>
-        </nav>
+  render() {
+    const { backgroundColor, backgroundImages } = this.state;
+    return (
+      <div
+        id="header"
+        style={{
+          ...headerStyle,
+          backgroundColor: backgroundColor,
+          backgroundImage: backgroundImages
+        }}
+      >
+        <div style={contentLang}>
+          <SelectLang />
+        </div>
+        <Nav callbackFromParent={this.myCallback} listLinkNav={listLink} />
       </div>
     );
   }
 }
+const contentLang = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end"
+};
+
+const headerStyle = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  padding: "30px 40px",
+  height: "560px",
+  position: "relative",
+  width: "auto",
+  overflow: "hidden"
+};
 
 export default Header;

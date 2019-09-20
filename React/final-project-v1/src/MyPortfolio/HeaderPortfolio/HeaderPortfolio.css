@@ -18,9 +18,9 @@ header a{
 }
 
 
-header a {
+/*header a {
     text-decoration: none;
-}
+}*/
 nav {
     max-width: 1200px;
     display: flex;
@@ -101,7 +101,7 @@ nav>a:hover, nav>div>div>a:hover {
     position: relative;
     box-shadow:none;
 }
-/**Hamburguer menu*/
+/**    align-items: center; menu*/
 .hamburguer .line {    
     display: none;   
 }

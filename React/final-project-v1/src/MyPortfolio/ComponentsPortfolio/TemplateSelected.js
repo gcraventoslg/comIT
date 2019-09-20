@@ -40,12 +40,13 @@ class TemplateSelected extends React.Component {
     this.state = {
       templateTitle: props.title || "title site",
       img: "",
-      publiched: props.publiched || false
+      publiched: props.publiched || false,
+      actionList: ["Edit", "Preview", "Configuration", "Delete"]
     };
   }
 
   render() {
-    const { templateTitle, publiched } = this.state;
+    const { templateTitle, publiched, actionList } = this.state;
     const templatetwo = "templatetwo.png";
     return (
       <div style={componentTemplateStyle}>
@@ -55,10 +56,7 @@ class TemplateSelected extends React.Component {
           style={imgStyle}
         />
         <div style={divSelectedStyle}>
-          <Optionist
-            textTitle={"Actions"}
-            listItems={["Edit", "Preview", "Configuration", "Delete"]}
-          />
+          <Optionist textTitle={"Actions"} listItems={actionList} />
           <div style={divInfoTemplateStyle}>
             <span style={{ textTransform: "uppercase" }}>{templateTitle}</span>
             <span style={{ fontSize: "14px" }}>
