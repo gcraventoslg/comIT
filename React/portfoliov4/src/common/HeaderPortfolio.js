@@ -63,7 +63,7 @@ class HeaderMyPortfolio extends React.Component {
 }
 
 const headerStyle = {
-  background: "linear-gradient(111deg,#74BDCB,#FFA384)",
+  background: "linear-gradient(111deg,#74BDCB,#1D3B58)",
   padding: "0px 90px",
   fontFamily: "Roboto, sans-serif",
   color: "white",

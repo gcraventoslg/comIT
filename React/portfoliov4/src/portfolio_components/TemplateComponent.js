@@ -35,7 +35,7 @@ class TemplateComponent extends React.Component {
       img,
       templateSpecification
     } = this.state;
-    console.log(img);
+    //console.log(img);
     let flexJustify = "space-between";
     if (!newTemplate && price) {
       flexJustify = "flex-end";
@@ -74,7 +74,9 @@ class TemplateComponent extends React.Component {
               >
                 NEW
               </span>
-              <span style={price ? spanPriceStyle : displayNone}>{price}</span>
+              <span style={price > 0 ? spanPriceStyle : displayNone}>
+                {price}
+              </span>
             </div>
             <div style={selectContentTagStyle}>
               <span id="selectTemplate">Select</span>

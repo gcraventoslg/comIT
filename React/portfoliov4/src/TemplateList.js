@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import templateLIst from "./models/templateList";
+//import templateLIst from "./models/templateList";
 import TemplateComponent from "./portfolio_components/TemplateComponent";
 
 class TemplateList extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      templateLIst: [],
+      isLoaded: false
+    };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:3000/demotemplates/")
+      .then(res => res.json())
+      .then(
+        result => {
+          this.setState({
+            isLoaded: true,
+            templateLIst: result.templates
+          });
+        },
+        error => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      );
+  }
+
   render() {
+    const { templateLIst } = this.state;
     const items = templateLIst.map((item, index) => {
-      console.log(item);
       return (
         <TemplateComponent
           key={index}
@@ -39,7 +66,6 @@ const titleStyle = {
   fontSize: "24px",
   color: "#707070",
   textAlign: "left"
-  //paddingBottom: "50px"
 };
 
 export default TemplateList;
