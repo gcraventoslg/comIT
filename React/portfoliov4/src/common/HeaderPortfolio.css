@@ -1,0 +1,158 @@
+#headerPort span:hover,#headerPort div > span:hover, #headerPort a:hover {
+    cursor: pointer;
+}
+
+#navPort>a:hover, #navPort>div>div>a:hover {
+    background: rgba(255,255,255, 0.5);
+    color: #7466C9;
+}
+
+.keepHover{
+    background: transparent;
+    color: white;
+    padding: 30px 0px;
+}
+.dropbtn {
+    /*background-color: #4CAF50;*/
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;    
+    width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    -webkit-transition: all 0.3s;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 54px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover {
+      cursor: pointer;
+  }
+
+  .active-#navPort{
+    display: flex;
+    order:3;
+    flex: 1 0 100%;
+    flex-direction: column-reverse;
+}
+.dropdown-mobile {
+    display: flex;
+    flex-direction: column;
+    /*background: transparent;*/
+    border: none;
+    /*color: white;*/
+    position: relative;
+    box-shadow:none;
+}
+/**    align-items: center; menu*/
+.hamburguer .line {    
+    display: none;   
+}
+
+@media only screen {
+    @media (max-width: 768px) {
+        #headerPort {    
+            padding:20px;        
+            max-width: 768px;             
+              display: flex;
+              justify-content: space-between;
+              font-size: 14px;  
+              flex-wrap: wrap;    
+        }
+        
+        #logoId{
+            order:0;
+        }
+
+        #navPort {
+            display: none;
+        }
+       
+        #navPort > * {
+            padding: 15px;
+            margin:0;
+        }
+
+        #navPort>:nth-child(2){
+            border-top: 1px solid black;
+        }         
+
+        #navPort>a, #navPort>div>div>a {
+            padding: 10px 40px;
+           /* text-decoration: underline;*/
+        }
+        
+        #navPort>a:hover {
+            text-decoration: underline;
+            background: transparent;
+            color:white;
+        }
+        .dropdown-content{
+            background: transparent;
+        }
+        #navPort>div>div>a:hover,.dropdown-content:hover,#navPort>div>span:hover{
+            text-decoration: underline;       
+        }
+
+        .dropdown-mobile {
+            color:red;
+        }      
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            position: relative;
+          }
+
+          /**Hamburguer menu*/
+          .hamburguer:hover{
+              cursor: pointer;
+          }
+        .hamburguer .line {
+            width: 50px;
+            height: 5px;
+            display: block !important;
+            background: white;
+            margin: 8px auto;
+            transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+        }
+
+        .hamburguer.is-active .line:nth-child(2){
+            opacity: 0;
+        }
+
+        .hamburguer.is-active .line:nth-child(1){
+            transform: translateY(13px) rotate(45deg);
+        }
+
+        .hamburguer.is-active .line:nth-child(3){
+            transform: translateY(-13px) rotate(-45deg);
+        }
+    }
+}

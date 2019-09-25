@@ -4,12 +4,13 @@ import listLink from "./LinkNavHome";
 import SelectLang from "./SelectLang";
 
 class Header extends React.Component {
-  constructor(props) {
+  constructor(props, match) {
     super(props);
     this.state = {
       backgroundColor: "#0476D0",
       backgroundImages: "linear-gradient(111deg,#0476D0,#2CEEF0)"
     };
+    console.log(match);
   }
   myCallback = dataFromChild => {
     const getSelectedLink = listLink.filter((item, index) => {
@@ -35,7 +36,7 @@ class Header extends React.Component {
         <div style={contentLang}>
           <SelectLang />
         </div>
-        <Nav callbackFromParent={this.myCallback} listLinkNav={listLink} />
+        {/* <Nav callbackFromParent={this.myCallback} listLinkNav={listLink} /> */}
       </div>
     );
   }

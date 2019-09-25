@@ -10,8 +10,8 @@ class MyPortfolio extends React.Component {
       <div>
         <HeaderPortfolio />
         <Switch>
-          <Route path="/my-portfolio" exact component={PostfolioSection} />
-          <Route path="/new-portfolio" exact component={NewPortfolio} />
+          {/*<Route path="/my-portfolio" exact component={PostfolioSection} />
+          <Route path="/new-portfolio" exact component={NewPortfolio} />*/}
         </Switch>
       </div>
     );

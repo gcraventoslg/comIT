@@ -4,7 +4,9 @@ import {
   Route,
   Switch,
   NavLink,
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Link,
+  Redirect
 } from "react-router-dom";
 import Feature from "./Feature";
 import HomePage from "./HomePage";
@@ -25,6 +27,7 @@ counterpart.setLocale("en");
 class Nav extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       call: props.callbackFromParent,
       listLinkNav: props.listLinkNav
@@ -64,17 +67,17 @@ class Nav extends React.Component {
           <div id="listNav" style={listStyle}>
             {items}
           </div>
-          <NavLink
+          <Link
             to="/login"
             style={loginButtonStyle}
             className="loginDefaultLink"
           >
             Login
-          </NavLink>
+          </Link>
         </div>
 
         <div>
-          <Switch>
+          {/* <Switch>
             {routes.map((route, index) => (
               <Route
                 key={index}
@@ -83,7 +86,8 @@ class Nav extends React.Component {
                 component={route.component}
               />
             ))}
-          </Switch>
+            <Route path="/login" component={Login} />
+          </Switch> */}
         </div>
       </div>
     );

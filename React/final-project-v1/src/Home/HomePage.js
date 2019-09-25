@@ -8,7 +8,7 @@ class HomePage extends React.Component {
     return (
       <div>
         <div>
-          <h1>Home Page</h1>
+          <h1>Home Pagedfgdfg</h1>
           <Translate content="myPortfolio" />
         </div>
       </div>

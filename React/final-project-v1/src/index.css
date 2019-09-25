@@ -99,12 +99,22 @@ code {
 /*End TemplateSelected Css*/
 
 /*Nav list ul*/
+#listNav{
+  font-family: 'Roboto'
+}
+
+#listNav a:nth-child(1){
+  background: blue;
+}
 #nav>a,#listNav>a, nav>a{
-  text-decoration: none
+  text-decoration: none;
+  font-size: 16px;
+  
 }
 
 #listNav>a:hover{
-  text-decoration: underline
+  text-decoration: underline;
+  background:transparent;
 }
 .loginDefaultLink{
   color: white;

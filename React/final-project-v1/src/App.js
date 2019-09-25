@@ -10,7 +10,6 @@ import NewPortfolio from "./MyPortfolio/NewPortfolio/NewPortfolio";
 import PostfolioSection from "./MyPortfolio/PortfolioSection/PortfolioSection";
 import HomePage from "./Home/HomePage";
 import Templates from "./Home/Templates";
-
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
@@ -28,15 +27,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {/*<Switch>
-          <Route path="/" exact component={Home} />
-          {/*<Route path="/feature" exact component={Feature} />*/}
-        {/*<Route path="/login" component={Login} />
-          <Route path="/register" exact component={SignIn} />
-          <Route path="/my-portfolio" exact component={MyPorfolio} />
-          <Route path="/new-portfolio" exact component={MyPorfolio} />
-        </Switch>*/}
-
         <Router>
           <Switch>
             <AppRoute exact path="/" layout={Home} component={HomePage} />
@@ -60,8 +50,8 @@ class App extends React.Component {
               layout={MyPorfolio}
               component={PostfolioSection}
             />
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={SignIn} />
+            <AppRoute exact path="/login" layout={Login} />
+            <AppRoute exact path="/register" layout={SignIn} />
           </Switch>
         </Router>
       </div>

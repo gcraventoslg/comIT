@@ -1,5 +1,5 @@
 /**Css new menu*/
-header {    
+/*header {    
     padding: 0px 90px;        
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -7,37 +7,37 @@ header {
     display: flex; 
     justify-content: space-between;
     align-items: center;
-}
+}*/
 
-header span:hover,header div > span:hover, header a:hover {
+/*header span:hover,header div > span:hover, header a:hover {
     cursor: pointer;
-}
+}*/
 
-header a{
+/*header a{
     color: white; 
-}
+}*/
 
 
 /*header a {
     text-decoration: none;
 }*/
-nav {
+/*nav {
     max-width: 1200px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
+}*/
 nav > * {
     /*margin-left: 40px;*/
 }
-nav>a, nav>div>span {
+/*nav>a, nav>div>span {
     padding: 30px 40px;
-}
+}*/
 
-nav>a:hover, nav>div>div>a:hover {
+/*nav>a:hover, nav>div>div>a:hover {
     background: rgba(255,255,255, 0.5);
     color: #7466C9;
-}
+}*/
 .keepHover{
     background: transparent;
     color: white;

@@ -1,0 +1,7 @@
+
+.btnSelectTemplate{background: "linear-gradient(111deg,#74BDCB,#FFA384)"}
+.btnSelectTemplate:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 6px rgba(49,48,48, 0.3);
+    background: radial-gradient(ellipse at left, #7466C9,#7466C9, #7466C9,#686DCB,#4B7CD1 70%);
+}
