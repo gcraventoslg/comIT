@@ -1,20 +1,26 @@
-"use strict";
+'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("demoUserTemplates", {
-      demotemplateId: {
+    return queryInterface.createTable('Users', {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      siteUrl: {
+      email: {
         type: Sequelize.STRING
       },
-      published: {
-        type: Sequelize.TINYINT
+      username: {
+        type: Sequelize.STRING
       },
-      urlParameter: {
+      password: {
+        type: Sequelize.STRING
+      },
+      name: {
+        type: Sequelize.STRING
+      },
+      lastName: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -28,6 +34,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("demoUserTemplates");
+    return queryInterface.dropTable('Users');
   }
 };

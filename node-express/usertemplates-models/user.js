@@ -12,9 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   User.associate = function(models) {
-    User.belongsToMany(models.Template, {
-      through: "UserTemplate"
-    });
+    // associations can be defined here
+    /*User.belongsToMany(models.Template, {
+      through: "UsersTemplate",
+      foreignKey: "userId",
+      as: "templates"
+    });*/
   };
   return User;
 };

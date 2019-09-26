@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("Templates", {
+    return queryInterface.createTable('Templates', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -12,9 +12,18 @@ module.exports = {
         type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.DOUBLE(11, 10)
+        type: Sequelize.DECIMAL
       },
       img: {
+        type: Sequelize.STRING
+      },
+      newTemplate: {
+        type: Sequelize.BOOLEAN
+      },
+      active: {
+        type: Sequelize.BOOLEAN
+      },
+      nameTemplateUrl: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -28,6 +37,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("Templates");
+    return queryInterface.dropTable('Templates');
   }
 };

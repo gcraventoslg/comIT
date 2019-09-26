@@ -6,9 +6,7 @@ var router = express.Router();
 /* GET users listing. */
 router.get("/", function(req, res, next) {
   //findAll(options: Object): Promise<Array<Model>>
-  models.User.findAll({
-    include: [models.Task]
-  }).then(function(users) {
+  models.User.findAll({}).then(function(users) {
     res.json({
       title: "Sequelize: Express Example",
       users: users
@@ -28,7 +26,8 @@ router.post("/", function(req, res) {
     username: req.body.username,
     name: req.body.name,
     password: req.body.password,
-    email: req.body.email
+    email: req.body.email,
+    lastName: "lastName"
   }).then(result => res.json(result));
 });
 

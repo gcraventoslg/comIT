@@ -22,7 +22,10 @@ router.post("/", function(req, res) {
   models.Template.create({
     title: req.body.title,
     img: req.body.img,
-    price: req.body.price
+    price: req.body.price,
+    newTemplate: req.body.newTemplate,
+    nameTemplateUrl: req.body.nameTemplateUrl,
+    active: req.body.active
   }).then(result => res.json(result));
 });
 

@@ -1,18 +1,24 @@
-"use strict";
+'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("Addresses", {
+    return queryInterface.createTable('Templates', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      street: {
+      title: {
         type: Sequelize.STRING
       },
-      postalCode: {
+      price: {
+        type: Sequelize.DECIMAL
+      },
+      img: {
         type: Sequelize.STRING
+      },
+      newTemplate: {
+        type: Sequelize.TINYINT
       },
       createdAt: {
         allowNull: false,
@@ -25,6 +31,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("Addresses");
+    return queryInterface.dropTable('Templates');
   }
 };

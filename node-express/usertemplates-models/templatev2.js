@@ -7,14 +7,16 @@ module.exports = (sequelize, DataTypes) => {
       price: DataTypes.DECIMAL,
       img: DataTypes.STRING,
       newTemplate: DataTypes.BOOLEAN,
-      newTemplateUrl: DataTypes.STRING,
-      active: DataTypes.BOOLEAN
+      active: DataTypes.BOOLEAN,
+      nameTemplateUrl: DataTypes.STRING
     },
     {}
   );
   Template.associate = function(models) {
     Template.belongsToMany(models.User, {
-      through: "UserTemplate"
+      through: "UsersTemplate",
+      foreignKey: "templateId",
+      as: "users"
     });
   };
   return Template;
